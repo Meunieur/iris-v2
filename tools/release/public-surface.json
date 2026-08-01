@@ -23,6 +23,7 @@
     "docs/README.md",
     "docs/contracts/**",
     "docs/decisions/**",
+    "docs/media/**",
     "docs/execution/GITHUB_MARKETPLACE_READINESS.md",
     "docs/execution/MVP_SCOPE.md",
     "docs/execution/PUBLIC_RELEASE_PLAN.md",
@@ -40,6 +41,7 @@
     "docs/execution/reports/2026-07-31-phase-5-4-observatory-density-performance.md",
     "docs/execution/reports/2026-07-31-public-candidate-preflight.md",
     "docs/execution/reports/2026-07-31-public-surface-audit.md",
+    "docs/execution/reports/2026-08-01-launch-media-verification.md",
     "docs/research/EXTRACTION_MANIFEST.md",
     "docs/research/UPSTREAM_NOTES.md",
     "docs/superpowers/specs/**",
@@ -59,6 +61,7 @@
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "DESIGN.md",
+    "docs/media/README.md",
     "LICENSES/ASHR12-iris-MIT.txt",
     "NOTICE",
     "PRIVACY.md",
@@ -87,6 +90,9 @@
     "docs/superpowers/plans/**"
   ],
   "approved_binary_paths": [
-    "apps/desktop/vendor/mediapipe/gesture_recognizer.task"
+    "apps/desktop/vendor/mediapipe/gesture_recognizer.task",
+    "docs/media/iris-v2-launch-loop.mp4",
+    "docs/media/iris-v2-readme-hero.png",
+    "docs/media/iris-v2-social-preview.png"
   ]
 }

@@ -78,7 +78,7 @@ Sources:
 | Production dependency audit | Zero known vulnerabilities | Re-run on every candidate |
 | Development packaging dependency audit | Zero known vulnerabilities | Re-run the fail-closed full-graph policy on every candidate |
 | Current snapshot privacy scrub | Complete for bounded scanner | Zero local-account markers and zero contiguous high-signal secret patterns; remaining drive paths are synthetic test/fixture inputs |
-| Deterministic public-candidate preflight | Ready 2026-08-01 | 236 files, 0 technical errors and 0 owner blockers |
+| Deterministic public-candidate preflight | Ready 2026-08-01 | 241 files, 0 technical errors and 0 owner blockers |
 | Public history boundary | Accepted | [ADR-008](../decisions/ADR-008-public-release-boundary.md) keeps internal history private and publishes a fresh curated import |
 | Code of conduct | Prepared | Contributor Covenant 2.1 with owner-provided private enforcement contact |
 | Project license | Prepared | Apache-2.0 with `Iris v2 contributors` notice and preserved third-party terms |
@@ -86,20 +86,21 @@ Sources:
 
 ### Media package
 
-Do not publish screenshots taken over a private desktop. Produce a clean,
-staged media set from the exact release candidate:
+The source-preview media set is complete and checked against the exact public
+surface:
 
-1. 1280x800 hero image: Command Deck with synthetic brain/task data, visible
-   Jarvis authority and no private paths.
-2. 8-15 second silent loop: compact HUD expands into the Deck, opens Galaxy,
-   then shows an R0 task moving through authoritative events.
-3. 60-90 second narrated demo: conversation proposal, Jarvis task execution,
-   stop/recovery and local gesture/keyboard parity.
-4. GitHub social preview using the aperture icon, deep-space canvas, cyan intent
-   and violet cognition tokens from `DESIGN.md`.
+1. 1600x900 README hero: governed cockpit, Neural Observatory and explicit
+   JarvisOS authority boundary.
+2. 8-second silent loop: the product promise resolves into the same read-only
+   Observatory surface without implying a provider or task execution.
+3. 1280x640 GitHub social preview using the aperture icon, deep-space canvas,
+   cyan intent and violet cognition tokens from `DESIGN.md`.
 
-Every capture must show only behavior that passed on the same artifact. Synthetic
-or fixture-backed data must be labelled as demo data.
+All three assets use a sanitized, local representative capture labelled `NO
+JARVIS DATA COPIED`. No private desktop, credential, path, raw session or
+JarvisOS data is present. A narrated conversation/task demo remains deferred
+until those live behaviors are independently authorized and verified on a
+release artifact.
 
 ## Owner decisions required after the source preview
 
@@ -201,7 +202,8 @@ is not a release-quality metric.
 - [x] License, code of conduct, support and security-reporting path published.
 - [ ] Windows artifact is signed and accompanied by SHA-256 checksums.
 - [ ] Build provenance/attestation or an explicit equivalent is published.
-- [ ] Clean media package approved against the exact release candidate.
+- [x] Clean source-preview media package approved against the exact release
+  candidate; narrated provider/task media remains deferred with those features.
 - [ ] Rollback owner, trigger and communication path confirmed.
 
 ## Rollback plan

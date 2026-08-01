@@ -1,8 +1,12 @@
 # Iris v2
 
 <p align="center">
-  <img src="apps/desktop/build/icon.svg" width="112" height="112" alt="Iris v2 aperture icon">
+  <a href="docs/media/iris-v2-launch-loop.mp4">
+    <img src="docs/media/iris-v2-readme-hero.png" width="100%" alt="Iris v2 governed AI cockpit with a read-only Neural Observatory">
+  </a>
 </p>
+
+<p align="center"><em>Select the hero to watch the 8-second silent source preview.</em></p>
 
 <p align="center">
   <strong>A calm, transparent Windows cockpit for governed local AI.</strong><br>

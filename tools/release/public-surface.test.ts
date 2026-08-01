@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+
 import { describe, expect, it } from "vitest";
 
 import {
@@ -21,6 +23,20 @@ function text(path: string, content = "safe"): PublicSurfaceFile {
 }
 
 describe("public release candidate surface", () => {
+  it("publishes the launch media through an explicit binary allowlist", () => {
+    const repositoryPolicy = JSON.parse(
+      readFileSync(new URL("./public-surface.json", import.meta.url), "utf8"),
+    ) as PublicSurfacePolicy;
+
+    expect(repositoryPolicy.public_paths).toContain("docs/media/**");
+    expect(repositoryPolicy.required_paths).toContain("docs/media/README.md");
+    expect(repositoryPolicy.approved_binary_paths).toEqual(expect.arrayContaining([
+      "docs/media/iris-v2-readme-hero.png",
+      "docs/media/iris-v2-social-preview.png",
+      "docs/media/iris-v2-launch-loop.mp4",
+    ]));
+  });
+
   it("default-denies files outside the public allowlist", () => {
     const allowlistPolicy = {
       ...policy,

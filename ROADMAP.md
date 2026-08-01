@@ -478,6 +478,9 @@ CI, Dependabot, private vulnerability reporting and the staged rollback plan.
 Hosted CI passes the exact public snapshot. Secret scanning, push protection,
 vulnerability alerts and Dependabot security updates are enabled. The current
 full dependency graph and production graph report zero known vulnerabilities.
+The README hero, GitHub social image and silent launch loop are locally rendered
+from representative read-only data, privacy-reviewed and protected by the
+default-deny public binary allowlist.
 No signed public binary, signing identity, Marketplace unit or live-runtime
 promotion is inferred by this source release.
 
