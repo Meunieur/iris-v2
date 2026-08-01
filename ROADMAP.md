@@ -469,20 +469,17 @@ promote.
 **Goal:** promote Iris v2 to the principal operator-system AI with a reversible
 transition.
 
-**Repository-launch foundation status (2026-08-01):** a public-facing README,
-privacy notice, contribution boundary, changelog, issue/PR templates, pinned
-least-privilege Windows CI, Dependabot policy, release-note categories and an
-evidence-led staged release/rollback plan are prepared locally. The product
-owner accepted ADR-008, Apache-2.0, repository name `iris-v2` and a source-first
-developer preview. No authenticated Git remote, public binary, signing identity
-or promotion is inferred. The private conduct contact
-is now owner-provided and published in `CODE_OF_CONDUCT.md`. Production
-dependencies report zero known vulnerabilities; the
-stable Electron Builder graph propagates 16 development-only package findings
-from one reviewed advisory. A fail-closed policy now proves exact advisory
-provenance, development-only reachability and a 2026-08-14 review deadline in
-local checks and CI. A stable builder upgrade or fresh owner risk review remains
-required before a signed release candidate.
+**Repository-launch foundation status (2026-08-01):** the source-first developer
+preview is published from the ADR-008 curated boundary at
+[Meunieur/iris-v2](https://github.com/Meunieur/iris-v2) under Apache-2.0. The
+public repository includes the product README, privacy/contribution/security
+boundaries, community templates, Discussions, pinned least-privilege Windows
+CI, Dependabot, private vulnerability reporting and the staged rollback plan.
+Hosted CI passes the exact public snapshot. Secret scanning, push protection,
+vulnerability alerts and Dependabot security updates are enabled. The current
+full dependency graph and production graph report zero known vulnerabilities.
+No signed public binary, signing identity, Marketplace unit or live-runtime
+promotion is inferred by this source release.
 
 ### Tasks
 
@@ -494,11 +491,13 @@ required before a signed release candidate.
 4. Run performance, long-session, offline, provider-outage, DPI/multi-monitor,
    startup and shutdown suites.
 5. Stage a limited daily-driver period before changing autostart/default app.
-6. Prepare the public repository/release surface and select a separate GitHub
-   Marketplace delivery unit (GitHub App or single-purpose Action) before any
-   listing work; the desktop executable alone is not a Marketplace product.
-7. Publish from a product-owner-approved curated snapshot rather than exposing
-   machine-local working history; scan the exact public file set before import.
+6. Maintain the published source repository/release surface and select a
+   separate GitHub Marketplace delivery unit (GitHub App or single-purpose
+   Action) before any listing work; the desktop executable alone is not a
+   Marketplace product.
+7. Continue publishing from product-owner-approved curated snapshots rather
+   than exposing machine-local working history; scan each exact public file set
+   before import or update.
 
 **Acceptance criteria**
 
