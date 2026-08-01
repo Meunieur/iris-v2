@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "review_by": "2026-08-14",
+  "owner": "Iris v2 product owner",
+  "allow_dev_only_advisories": [
+    {
+      "url": "https://github.com/advisories/GHSA-mh99-v99m-4gvg",
+      "reason": "electron-builder 26.15.3 pins legacy glob/minimatch/brace-expansion through packaging-only dependencies. Inputs are trusted repository paths, CI is read-only and time-bounded, and the exception expires while a stable v27-compatible builder is awaited."
+    }
+  ]
+}

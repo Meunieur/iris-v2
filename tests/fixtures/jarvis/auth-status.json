@@ -1,0 +1,7 @@
+{
+  "needs_setup": false,
+  "auth_required": true,
+  "require_login": true,
+  "authed": false,
+  "username": ""
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": false,
+    "outDir": "dist/electron",
+    "rootDir": "src",
+    "types": [
+      "node",
+      "electron"
+    ]
+  },
+  "include": [
+    "src/main/**/*.ts",
+    "src/preload/**/*.cjs",
+    "src/preload/**/*.cts"
+  ]
+}

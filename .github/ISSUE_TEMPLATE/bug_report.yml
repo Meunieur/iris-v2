@@ -1,0 +1,73 @@
+name: Bug report
+description: Report a reproducible Iris v2 defect without private data.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Iris v2. Do not include credentials,
+        cookies, private brain content, personal data or raw private paths.
+        Report suspected vulnerabilities through the private path in SECURITY.md.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues and the current execution status.
+          required: true
+        - label: I removed credentials and private data from this report.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the defect and its impact in plain language.
+      placeholder: Iris showed... when I...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: List the smallest sequence that consistently triggers it.
+      placeholder: |
+        1. Launch...
+        2. Open...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include Windows, Node.js, Iris commit/version and enabled integrations.
+      placeholder: |
+        Windows: 11 24H2
+        Node.js: 22.18.0
+        Iris: commit or release
+        Jarvis: connected / offline
+        Camera: off / on
+        Gemini: disabled / enabled
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Add sanitized logs or screenshots and say whether restart changes the result.

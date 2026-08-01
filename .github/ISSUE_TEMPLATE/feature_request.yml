@@ -1,0 +1,67 @@
+name: Feature request
+description: Propose one coherent product capability or improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Iris v2 prefers fewer complete vertical slices. Explain the operator
+        problem first, then the smallest capability that solves it.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Operator problem
+      description: What job is difficult today, and for whom?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+      description: Describe observable behavior, not an implementation shopping list.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: owner
+    attributes:
+      label: Likely canonical owner
+      options:
+        - Iris UI or interaction
+        - JarvisOS policy, data or execution
+        - Gemini conversation bridge
+        - Optional Hermes capability pack
+        - Unsure; an ADR is needed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Highest likely risk
+      options:
+        - R0 read or view
+        - R1 reversible local change
+        - R2 external or account-scoped action
+        - R3 destructive, financial or security action
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety, privacy and recovery
+      description: What could go wrong, what requires approval, and how should it stop or roll back?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include a smaller solution or existing workflow if one exists.
