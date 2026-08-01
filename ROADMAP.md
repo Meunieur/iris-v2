@@ -134,20 +134,23 @@ brains and sessions.
 - [x] Real local and packaged public smoke against Jarvis health/version/auth,
   restricted sign-in window, listener/process ownership, renderer reconnect,
   Iris shutdown, offline state, keyboard focus and target-scale HUD.
-- [ ] Operator completes manual sign-in and verifies authenticated `ready` plus
-  protected brain/session public projections. A 2026-07-31 login reached the
-  protected boundary and exposed nullable legacy session titles; the resulting
-  adapter bug is fixed and packaged, but the in-memory session was cleared by
-  the rebuild, so a fresh post-fix login remains pending.
+- [x] Operator completed manual sign-in on 2026-08-01 and verified authenticated
+  `ready`, protected brain/session projections and the read-only Second Brain.
+- [x] Owner approved a persistent, isolated Electron auth partition; the
+  regression test proves the sign-in window and main-process transport share
+  `persist:iris-jarvis-auth` without adding preload or renderer credential
+  access.
+- [ ] After the next fresh package/login, close and relaunch Iris once to record
+  live evidence that the still-valid Javis session is retained.
 
 **Checkpoint:** `READY_FOR_PHASE_1_REVIEW`. The thin shell, restricted sign-in,
-runtime ownership, renderer reload/shutdown recovery and packaged UI are
-demonstrated. Manual operator login is the remaining human checkpoint action;
-do not begin Phase 2 before review.
+runtime ownership, renderer reload/shutdown recovery, packaged UI and protected
+read are demonstrated. Persistent-login relaunch evidence remains a bounded
+manual regression check; it does not reopen the accepted Phase 1 boundary.
 
-**Owner decision 2026-07-24:** Phase 1 accepted and Phase 2 authorized. The
-manual authenticated protected projection check remains explicitly unverified;
-acceptance does not manufacture that evidence.
+**Owner decisions:** Phase 1 was accepted and Phase 2 authorized on 2026-07-24.
+The protected projection checkpoint was completed on 2026-08-01, and persistent
+login was approved later that day without granting renderer credential access.
 
 ## Phase 2 — Iris Glass HUD and local gesture runtime
 

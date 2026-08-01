@@ -95,11 +95,10 @@ describe("Electron window security policy", () => {
     expect(isTrustedAudioPermission({ ...trusted, webContentsId: 99 })).toBe(false);
   });
 
-  it("creates an in-memory auth window without a preload", () => {
+  it("creates a persistent auth window without exposing a preload", () => {
     const options = authWindowOptions();
 
-    expect(AUTH_PARTITION).toBe("iris-jarvis-auth");
-    expect(AUTH_PARTITION.startsWith("persist:")).toBe(false);
+    expect(AUTH_PARTITION).toBe("persist:iris-jarvis-auth");
     expect(options.webPreferences).toMatchObject({
       contextIsolation: true,
       nodeIntegration: false,

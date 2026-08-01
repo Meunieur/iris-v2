@@ -108,7 +108,7 @@ export function TaskDock(props: TaskDockProps) {
         </div>
       </form>
 
-      {!signedIn ? <p className="task-empty">Đăng nhập JarvisOS để gửi tác vụ. Iris không đọc hoặc lưu cookie.</p> : null}
+      {!signedIn ? <p className="task-empty">Đăng nhập JarvisOS để gửi tác vụ. Cookie chỉ nằm trong phiên Electron riêng và không đi vào giao diện Iris.</p> : null}
 
       {task !== undefined ? <article className="task-record" aria-live="polite">
         <div className="task-record-head">

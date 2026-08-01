@@ -77,6 +77,53 @@ The exact evidence and unresolved debt live in
 The current packaging exception and runtime regression smoke are recorded in
 [the supply-chain hardening report](docs/execution/reports/2026-07-31-build-supply-chain-hardening.md).
 
+## Install Javis OS for the Second Brain
+
+Iris v2 is the presentation and interaction layer. Brains, sessions, memory and
+Second Brain data are owned by
+[Javis OS](https://github.com/blogminhquy/javis-os), which must be installed and
+running for the complete core experience. Iris displays a sanitized read-only
+projection; it does not copy, migrate or maintain a second brain database.
+
+### Windows setup
+
+1. Install Git, Python 3.12 and Node.js 22.
+2. Clone Javis OS:
+
+   ```powershell
+   git clone https://github.com/blogminhquy/javis-os.git
+   ```
+
+3. Open the cloned folder and run `setup.bat` once. On later starts, use
+   `start-javis.vbs` for background mode or `start-javis.bat` for a visible
+   console.
+4. Open `http://localhost:7777`, complete the first-run setup and select a model
+   provider on the **Models** page.
+5. Create or select a brain from the selector in the upper-left corner. Use
+   **Brain Default** to start fresh, or use the folder button to attach an
+   existing Markdown or Obsidian vault.
+6. Keep Javis OS running, then start Iris v2. Press
+   <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> to open the Command
+   Deck. If sign-in is required, choose **Sign in to Javis OS** and authenticate
+   manually. Iris remembers the resulting Javis session inside its private
+   Windows application profile, so later Iris restarts do not require another
+   login until Javis expires or invalidates that session.
+7. Select the brain in Iris and load the Second Brain in the Neural Observatory.
+
+The current package is attached-only and connects to one owner-started Javis OS
+listener at `http://127.0.0.1:7777`. Iris never starts a duplicate backend or
+moves Javis data. The persistent cookie remains inside Electron's isolated
+main-process session and never crosses preload into the renderer. The MVP
+Second Brain surface is read-only: users can inspect the knowledge graph,
+browse the bounded session index and search the sanitized snapshot without
+changing or deleting source notes.
+
+For more detail, read the upstream
+[quick start](https://github.com/blogminhquy/javis-os/blob/main/QUICKSTART.md),
+[Second Brain guide](https://github.com/blogminhquy/javis-os/blob/main/docs/13-second-brain-bo-nho-wiki.md)
+and
+[account security guide](https://github.com/blogminhquy/javis-os/blob/main/docs/14-bao-mat-tai-khoan.md).
+
 ## Run the deterministic project checks
 
 ### Prerequisites

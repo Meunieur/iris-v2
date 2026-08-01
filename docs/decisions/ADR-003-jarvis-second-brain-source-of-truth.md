@@ -49,3 +49,18 @@ still clears the catalog and requires sign-in. This keeps Second Brain
 availability independent from unrelated legacy session drift without weakening
 authentication or path isolation.
 
+## Persistent Iris authentication session
+
+On 2026-08-01 the product owner approved retaining the dedicated Javis login
+across Iris restarts. The Electron partition is therefore
+`persist:iris-jarvis-auth` rather than an in-memory partition. This persists
+only Chromium's Javis session cookie inside Iris's private application profile;
+Iris does not store the password and the renderer still receives no cookie,
+token, credential API or raw authenticated response.
+
+The exact-origin navigation allowlist, denied permissions/popups, shared
+main-process transport and protected-read failure behavior remain unchanged.
+JavisOS continues to own session expiry and invalidation. This decision changes
+client session durability only; it does not create a second credential source,
+authorize remote endpoints or weaken the attached-only runtime boundary.
+

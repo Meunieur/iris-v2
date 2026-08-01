@@ -3,7 +3,7 @@
 **Updated:** 2026-08-01
 **Overall state:** `MVP_CORE_VERIFIED_EXTENSION_BACKLOG`.
 **MVP direction:** The product owner requested a focused completion slice on 2026-08-01: Electron HUD + local gesture runtime + one attached JarvisOS + read-only Second Brain. The default renderer hides Gemini/task panes; advanced capability work remains extension backlog.
-**Phase 1:** accepted by the product owner on 2026-07-24. Code, deterministic verification, final Windows packaging, public live runtime, ownership/reload/shutdown and target-scale UI evidence are complete. Manual operator login and authenticated protected reads remain explicitly unverified.
+**Phase 1:** accepted by the product owner on 2026-07-24. Code, deterministic verification, final Windows packaging, public live runtime, ownership/reload/shutdown and target-scale UI evidence are complete. Manual authenticated protected reads were accepted on 2026-08-01; persistent-login close/relaunch evidence remains a bounded manual regression check.
 **Phase 2:** implementation, deterministic verification, packaging, HUD/Deck runtime smoke, fresh camera lifecycle/performance, actual Windows 125%/150%, and controlled 200% renderer-scale checks are complete. Four physical gesture ergonomics, actual Windows 200%, secondary-monitor and final owner review remain deferred and explicitly unverified because the owner is remote.
 **Phase 8 source preview:** the curated source snapshot is published at [Meunieur/iris-v2](https://github.com/Meunieur/iris-v2) as a fresh public history under MIT. GitHub-hosted Windows CI passes the locked install, deterministic tests, integration, typecheck, lint, public-surface preflight, build and dependency audits. Community templates, Discussions and private vulnerability reporting are enabled. No signed public binary or Marketplace unit exists; the full dependency graph and production graph report zero known vulnerabilities.
 
@@ -93,14 +93,14 @@ Build-chain evidence: [supply-chain hardening verification](reports/2026-07-31-b
 
 | Item | State | Evidence / next gate |
 |---|---|---|
-| Secure attached shell | Live packaged | Electron 43.2.0 shell uses custom `iris://` renderer protocol, sandbox, context isolation, denied navigation/popups/permissions and one in-memory auth partition. Sandboxed preload is bundled into one file. |
+| Secure attached shell | Persistent-login fix packaged; authenticated relaunch pending | Electron 43.2.0 shell uses custom `iris://` renderer protocol, sandbox, context isolation, denied navigation/popups/permissions and the isolated `persist:iris-jarvis-auth` partition. Sandboxed preload is bundled into one file; cookies never cross it. The fresh package opened one responsive window/four expected processes, connected once to Jarvis and shut down cleanly. |
 | Read-only adapter | Deterministically verified | Exact loopback endpoint parser; fixed GET routes; 5 second timeout; 64 KiB response cap; redirect/content-type/schema checks; public projections only. |
 | Reconnect and renderer bridge | Deterministically verified | Monotonic snapshots, stale completion rejection, one retry timer, sender ID/frame validation and four-method preload surface. |
 | Operator HUD | Packaged and visually verified | Vietnamese sign-in-required and offline/reconnecting states at 1280x800, visible keyboard focus, empty/error states and reduced-motion source/tests using `DESIGN.md` tokens. |
 | Local integration | Complete for disposable server | Locked and cookie-authenticated read paths, redirect denial, timeout and GET-only behavior pass against a disposable loopback server. |
 | Windows package | Verified | `release/win-unpacked/Iris v2.exe`; ASAR has required outputs and excludes internal workspace source/config. Preload and renderer start without application errors. |
 | Historical live JarvisOS ownership | Reverified 2026-07-28 | Stable PID `33456` and fingerprint before/after the earlier packaged Iris shutdown; only port 7777 listened across 7777-7816. A later externally owned restart is recorded under Phase 2. |
-| Authenticated protected projection | Bug reproduced and repaired; final re-login pending | The dedicated session accepted an operator login on 2026-07-31. Live protected reconciliation exposed 8/48 sessions with `title = null`; the strict contract hid the valid brain catalog. Nullable titles and session-only degradation are now covered and packaged. The rebuild cleared the intentionally in-memory cookie, so a post-fix manual re-login remains required before claiming `ready` and protected graph readability. |
+| Authenticated protected projection | Verified 2026-08-01; persistent relaunch evidence pending | The operator verified `ready`, public brain/session projections and the read-only Second Brain after the nullable-title repair. The owner then approved replacing the in-memory partition with `persist:iris-jarvis-auth`; deterministic security coverage and fresh packaging pass, while one package/login/close/relaunch check remains to prove the installed profile behavior. |
 
 See [the Phase 1 verification report](reports/2026-07-24-phase-1-verification.md).
 

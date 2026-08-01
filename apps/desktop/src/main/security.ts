@@ -4,7 +4,7 @@ import type { BrowserWindowConstructorOptions } from "electron";
 
 export const SHELL_ORIGIN = "iris://app";
 export const DEV_RENDERER_URL = "http://127.0.0.1:5173/";
-export const AUTH_PARTITION = "iris-jarvis-auth";
+export const AUTH_PARTITION = "persist:iris-jarvis-auth";
 
 const secureWebPreferences = {
   contextIsolation: true,

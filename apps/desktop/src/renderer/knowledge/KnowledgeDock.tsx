@@ -39,7 +39,7 @@ export function KnowledgeDock(props: KnowledgeDockProps) {
         {props.state.state === "ready" ? <span className="knowledge-source">đã đồng bộ</span> : null}
       </div>
       <p className="knowledge-policy">Chọn brain chỉ đổi ngữ cảnh hiển thị trong Iris; không đổi brain mặc định của JarvisOS.</p>
-      {requiresSignIn ? <p className="knowledge-empty">Đăng nhập JarvisOS để xem Second Brain. Iris không đọc hoặc lưu cookie.</p> : <>
+      {requiresSignIn ? <p className="knowledge-empty">Đăng nhập JarvisOS để xem Second Brain. Cookie chỉ nằm trong phiên Electron riêng và không đi vào giao diện Iris.</p> : <>
         <div className="knowledge-controls">
           <label htmlFor="knowledge-brain">Brain để xem</label>
           <select
