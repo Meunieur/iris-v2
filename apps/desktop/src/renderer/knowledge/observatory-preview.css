@@ -1,0 +1,78 @@
+@import "../styles.css";
+
+html,
+body,
+#root {
+  min-height: 100%;
+  overflow: auto;
+  background: #03060c;
+}
+
+.observatory-preview-page {
+  min-height: 100vh;
+  padding: clamp(24px, 4vw, 64px);
+  background:
+    radial-gradient(circle at 50% 8%, rgba(86, 230, 244, 0.1), transparent 34%),
+    radial-gradient(circle at 82% 70%, rgba(155, 140, 255, 0.09), transparent 38%),
+    linear-gradient(rgba(86, 230, 244, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(86, 230, 244, 0.025) 1px, transparent 1px),
+    #03060c;
+  background-size: auto, auto, 52px 52px, 52px 52px, auto;
+}
+
+.observatory-preview-frame {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.observatory-preview-meta {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.observatory-preview-meta p {
+  margin: 0 0 6px;
+  color: var(--cyan);
+  font: 650 10px/1 "JetBrains Mono", Consolas, monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.observatory-preview-meta h1 {
+  margin: 0;
+  font: 650 clamp(28px, 4vw, 48px)/0.96 "Space Grotesk", Inter, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+.observatory-preview-meta span {
+  color: rgba(155, 169, 184, 0.74);
+  font: 9px/1.5 "JetBrains Mono", Consolas, monospace;
+  text-align: right;
+}
+
+.observatory-preview-frame .knowledge-dock {
+  padding: 20px;
+  overflow: visible;
+  background: rgba(8, 12, 20, 0.92);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.48), 0 0 80px rgba(86, 230, 244, 0.035);
+}
+
+.observatory-preview-frame .knowledge-graph-shell,
+.observatory-preview-frame .observatory-stage {
+  min-height: 560px;
+}
+
+.observatory-preview-frame .observatory-inspector {
+  min-width: 210px;
+}
+
+@media (max-width: 760px) {
+  .observatory-preview-page { padding: 16px; }
+  .observatory-preview-meta { align-items: flex-start; flex-direction: column; }
+  .observatory-preview-meta span { text-align: left; }
+  .observatory-preview-frame .knowledge-graph-shell,
+  .observatory-preview-frame .observatory-stage { min-height: 420px; }
+}

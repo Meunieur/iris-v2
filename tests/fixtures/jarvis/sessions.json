@@ -1,0 +1,29 @@
+{
+  "sessions": [
+    {
+      "id": "session-synthetic-001",
+      "title": "Synthetic architecture review",
+      "brain": "E:\\synthetic\\JarvisOS\\brains\\default",
+      "engine": "codex",
+      "model": "synthetic-model",
+      "cli_session_id": "private-cli-resume-id",
+      "created_at": 1784761200.0,
+      "updated_at": 1784764800.0,
+      "msg_count": 6,
+      "preview": "Synthetic fixture text only",
+      "private_future_field": "raw-only"
+    },
+    {
+      "id": "session-synthetic-002",
+      "title": "Empty synthetic session",
+      "brain": "E:/synthetic/JarvisOS/brains/research/",
+      "engine": null,
+      "model": null,
+      "cli_session_id": null,
+      "created_at": 1784765000.0,
+      "updated_at": 1784765000.0,
+      "msg_count": 0,
+      "preview": null
+    }
+  ]
+}

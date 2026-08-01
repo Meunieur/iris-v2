@@ -1,0 +1,19 @@
+{
+  "dir": "E:\\synthetic\\JarvisOS\\brains",
+  "brains": [
+    {
+      "name": "default",
+      "path": "E:\\synthetic\\JarvisOS\\brains\\default",
+      "notes": 12,
+      "is_default": true,
+      "private_future_field": "raw-only"
+    },
+    {
+      "name": "research",
+      "path": "E:/synthetic/JarvisOS/brains/research/",
+      "notes": 4,
+      "is_default": false
+    }
+  ],
+  "future_catalog_field": 1
+}

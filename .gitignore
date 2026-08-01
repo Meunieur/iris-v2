@@ -1,0 +1,38 @@
+# Dependencies and build output
+node_modules/
+dist/
+out/
+/release/
+coverage/
+.vite/
+apps/desktop/public/mediapipe/
+*.log
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+
+# Local runtime/cache artifacts (JarvisOS data must never be vendored here)
+.cache/
+.runtime/
+data/
+logs/
+models/
+tmp/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*.local.json
+
+# Local isolated implementation worktrees
+.worktrees/
+
+# Local Superpowers execution ledger
+.superpowers/sdd/

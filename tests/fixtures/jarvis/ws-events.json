@@ -1,0 +1,57 @@
+[
+  {
+    "type": "hello",
+    "stop_tag": "chat:synthetic"
+  },
+  {
+    "type": "status",
+    "content": "Synthetic runtime is working",
+    "session_id": "session-synthetic-001"
+  },
+  {
+    "type": "tool_call",
+    "tool": "memory.search",
+    "content": "Synthetic tool start",
+    "session_id": "session-synthetic-001"
+  },
+  {
+    "type": "tool_result",
+    "content": "Synthetic result without authoritative success metadata",
+    "session_id": "session-synthetic-001"
+  },
+  {
+    "type": "stream",
+    "content": "Synthetic partial text",
+    "tts": false,
+    "session_id": "session-synthetic-001"
+  },
+  {
+    "type": "response",
+    "content": "Synthetic final text",
+    "session_id": "session-synthetic-001",
+    "cli_session_id": "private-cli-resume-id",
+    "cost_usd": 0.0123,
+    "engine": "codex",
+    "model": "synthetic-model"
+  },
+  {
+    "type": "system",
+    "content": "Synthetic notice",
+    "session_id": "session-synthetic-001"
+  },
+  {
+    "type": "error",
+    "content": "Synthetic recoverable error",
+    "session_id": "session-synthetic-001"
+  },
+  {
+    "type": "turn_done",
+    "session_id": "session-synthetic-001"
+  },
+  {
+    "type": "future_private_event",
+    "payload": {
+      "path": "E:\\synthetic\\private"
+    }
+  }
+]
