@@ -34,6 +34,7 @@ describe("Windows packaging source", () => {
       { from: "../../NOTICE", to: "NOTICE" },
       { from: "../../THIRD_PARTY_NOTICES.md", to: "THIRD_PARTY_NOTICES.md" },
       { from: "../../LICENSES/ASHR12-iris-MIT.txt", to: "LICENSES/ASHR12-iris-MIT.txt" },
+      { from: "../../LICENSES/Apache-2.0.txt", to: "LICENSES/Apache-2.0.txt" },
     ]);
     expect(root.devDependencies).toMatchObject({
       "@electron/asar": "4.2.1",
@@ -59,6 +60,7 @@ describe("Windows packaging source", () => {
     expect(verifier).toContain('path.join(resourcesRoot, "LICENSE")');
     expect(verifier).toContain('path.join(resourcesRoot, "NOTICE")');
     expect(verifier).toContain('path.join(resourcesRoot, "LICENSES", "ASHR12-iris-MIT.txt")');
+    expect(verifier).toContain('path.join(resourcesRoot, "LICENSES", "Apache-2.0.txt")');
     expect(verifier).toContain("isForbiddenPackagedPath");
   });
 });

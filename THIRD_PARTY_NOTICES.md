@@ -15,8 +15,9 @@ Iris v2 uses `@mediapipe/tasks-vision` version `0.10.35` and the official
 Gesture Recognizer float16 model revision 1 for local hand-gesture inference.
 MediaPipe is licensed under the Apache License 2.0.
 
-The full Apache License 2.0 text is distributed in the root [LICENSE](LICENSE),
-and the project attribution summary is preserved in [NOTICE](NOTICE).
+The full Apache License 2.0 text is preserved at
+[LICENSES/Apache-2.0.txt](LICENSES/Apache-2.0.txt), and the project attribution
+summary is preserved in [NOTICE](NOTICE).
 
 - Source and license: [google-ai-edge/mediapipe](https://github.com/google-ai-edge/mediapipe)
 - Model source: [official Gesture Recognizer model](https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task)

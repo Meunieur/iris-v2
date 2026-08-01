@@ -6,10 +6,10 @@ and design discussions during the developer-preview period.
 
 ## Contribution terms
 
-Original Iris v2 code is distributed under the Apache License 2.0. Unless a
+Original Iris v2 code is distributed under the MIT License. Unless a
 contribution is conspicuously marked otherwise before submission, material
 intentionally submitted for inclusion in Iris v2 is offered under the same
-license, consistent with section 5 of Apache-2.0.
+license.
 
 Before investing in a large change, open an issue or discussion so the scope,
 authority boundary and verification plan can be agreed. Pull requests should

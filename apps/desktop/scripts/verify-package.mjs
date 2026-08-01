@@ -19,6 +19,7 @@ const licensePath = path.join(resourcesRoot, "LICENSE");
 const projectNoticePath = path.join(resourcesRoot, "NOTICE");
 const noticePath = path.join(resourcesRoot, "THIRD_PARTY_NOTICES.md");
 const upstreamLicensePath = path.join(resourcesRoot, "LICENSES", "ASHR12-iris-MIT.txt");
+const apacheLicensePath = path.join(resourcesRoot, "LICENSES", "Apache-2.0.txt");
 
 await access(path.join(packageRoot, "Iris v2.exe"));
 await access(asarPath);
@@ -26,6 +27,7 @@ await access(licensePath);
 await access(projectNoticePath);
 await access(noticePath);
 await access(upstreamLicensePath);
+await access(apacheLicensePath);
 
 const listedEntries = listPackage(asarPath, { isPack: false });
 const extractionPaths = new Map(listedEntries.map((entry) => [
@@ -78,14 +80,15 @@ for (const entry of rendererScripts) {
   }
 }
 
-const [projectLicense, projectNotice, notices, upstreamLicense] = await Promise.all([
+const [projectLicense, projectNotice, notices, upstreamLicense, apacheLicense] = await Promise.all([
   readFile(licensePath, "utf8"),
   readFile(projectNoticePath, "utf8"),
   readFile(noticePath, "utf8"),
   readFile(upstreamLicensePath, "utf8"),
+  readFile(apacheLicensePath, "utf8"),
 ]);
-if (!/Apache License[\s\S]*Version 2\.0/i.test(projectLicense)) {
-  throw new Error("Packaged Apache-2.0 LICENSE is incomplete");
+if (!/MIT License/i.test(projectLicense) || !/Meunieur and Iris v2 contributors/i.test(projectLicense)) {
+  throw new Error("Packaged MIT LICENSE is incomplete");
 }
 if (!/Iris v2/i.test(projectNotice) || !/MediaPipe/i.test(projectNotice) || !/ASHR12\/iris/i.test(projectNotice)) {
   throw new Error("Packaged NOTICE is incomplete");
@@ -95,6 +98,9 @@ if (!/MediaPipe Tasks Vision/i.test(notices) || !/Iris/i.test(notices)) {
 }
 if (!/MIT License/i.test(upstreamLicense) || !/Ashutosh Shrivastava/i.test(upstreamLicense)) {
   throw new Error("Packaged ASHR12/iris MIT license is incomplete");
+}
+if (!/Apache License[\s\S]*Version 2\.0/i.test(apacheLicense)) {
+  throw new Error("Packaged third-party Apache-2.0 license is incomplete");
 }
 
 console.info(`[iris] package_verified files=${entries.size} model_sha256=${modelHash}`);

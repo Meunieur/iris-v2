@@ -3,7 +3,7 @@
   "version": "0.1.0-alpha.1",
   "description": "Secure attached-only desktop shell for the JarvisOS runtime",
   "author": "Iris v2 Project",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "main": "dist/electron/main/main.js",
@@ -69,6 +69,10 @@
       {
         "from": "../../LICENSES/ASHR12-iris-MIT.txt",
         "to": "LICENSES/ASHR12-iris-MIT.txt"
+      },
+      {
+        "from": "../../LICENSES/Apache-2.0.txt",
+        "to": "LICENSES/Apache-2.0.txt"
       }
     ],
     "win": {

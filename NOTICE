@@ -1,5 +1,7 @@
 Iris v2
-Copyright 2026 Iris v2 contributors
+Copyright 2026 Meunieur and Iris v2 contributors
+
+Original Iris v2 code is distributed under the MIT License.
 
 Iris v2 includes the pinned MediaPipe Tasks Vision runtime and Gesture
 Recognizer model distributed under the Apache License 2.0.
@@ -7,4 +9,5 @@ Recognizer model distributed under the Apache License 2.0.
 Iris v2 independently reimplements interaction concepts from ASHR12/iris,
 Copyright (c) 2026 Ashutosh Shrivastava, distributed under the MIT License.
 
-See THIRD_PARTY_NOTICES.md and LICENSES/ for provenance and license texts.
+See LICENSE, THIRD_PARTY_NOTICES.md and LICENSES/ for provenance and license
+texts.

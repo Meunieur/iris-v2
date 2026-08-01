@@ -71,17 +71,17 @@ Sources:
 |---|---|---|
 | Public product README and architecture boundary | Published | CI badge and authority boundary are live |
 | Privacy and security posture | Published | Private vulnerability reporting and documented disclosure policy are live |
-| Contribution guide | Published under Apache-2.0 | Review contributions through the documented workflow |
+| Contribution guide | Published under MIT | Review contributions through the documented workflow |
 | Issue and pull-request templates | Published | Issues for bugs/features; pull requests use the review template |
 | Windows CI | Hosted and passing | Locked install, tests, integration, typecheck, lint, preflight, build and audits |
 | Changelog and release-note categories | Prepared | `0.1.0-alpha.1` source preview; no binary release |
 | Production dependency audit | Zero known vulnerabilities | Re-run on every candidate |
 | Development packaging dependency audit | Zero known vulnerabilities | Re-run the fail-closed full-graph policy on every candidate |
 | Current snapshot privacy scrub | Complete for bounded scanner | Zero local-account markers and zero contiguous high-signal secret patterns; remaining drive paths are synthetic test/fixture inputs |
-| Deterministic public-candidate preflight | Ready 2026-08-01 | 241 files, 0 technical errors and 0 owner blockers |
+| Deterministic public-candidate preflight | Ready 2026-08-01 | 242 files, 0 technical errors and 0 owner blockers |
 | Public history boundary | Accepted | [ADR-008](../decisions/ADR-008-public-release-boundary.md) keeps internal history private and publishes a fresh curated import |
 | Code of conduct | Prepared | Contributor Covenant 2.1 with owner-provided private enforcement contact |
-| Project license | Prepared | Apache-2.0 with `Iris v2 contributors` notice and preserved third-party terms |
+| Project license | Published | MIT with `Meunieur and Iris v2 contributors` copyright and preserved third-party terms |
 | Support channel | Published | Discussions for questions, Issues for bugs |
 
 ### Media package
@@ -112,7 +112,7 @@ release artifact.
 | Approve live Gemini credentials/provider review | External data flow and cost require explicit owner authorization |
 | Approve promotion/autostart | Changes daily-driver and startup behavior and is a separate Phase 8 gate |
 
-Resolved on 2026-08-01: Apache-2.0 original-code license, ADR-008 curated
+Resolved on 2026-08-01: MIT original-code license, ADR-008 curated
 snapshot boundary, GitHub owner `Meunieur`, repository name `iris-v2`,
 source-first developer preview and the private conduct-reporting contact.
 

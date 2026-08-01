@@ -1,6 +1,6 @@
 # ADR-008: Publish a Curated Snapshot, Not the Internal Working History
 
-- **Status:** Accepted — source-first curated publication approved
+- **Status:** Accepted — source-first curated publication approved; license amended
 - **Date:** 2026-07-31
 - **Accepted:** 2026-08-01
 
@@ -12,7 +12,7 @@ handoffs, agent prompts, local checkout paths and runtime evidence that are
 useful for continuity but are not part of the public product.
 
 There is currently no Git remote or authenticated public repository identity.
-The product owner selected Apache-2.0 for original Iris v2 code and authorized
+The product owner selected MIT for original Iris v2 code and authorized
 a step-by-step source-first GitHub publication. That makes it possible to keep a
 clean publication boundary before anything is exposed. GitHub documents that
 deleting a file from the current tree does not
@@ -75,7 +75,9 @@ public surface, but preserves that history privately and produces a smaller,
 clearer and safer repository for new users. Future public development can then
 continue normally from the initial import commit.
 
-The owner accepted this boundary on 2026-08-01. Publishing the existing history
+The owner accepted this boundary on 2026-08-01 and amended the public
+original-code license to MIT on 2026-08-01. Third-party code and assets remain
+under their respective licenses. Publishing the existing history
 would be a different decision and still requires a separate full-history
 sensitive-data audit plus an approved rewrite/rotation plan.
 

@@ -5,14 +5,14 @@
 **MVP direction:** The product owner requested a focused completion slice on 2026-08-01: Electron HUD + local gesture runtime + one attached JarvisOS + read-only Second Brain. The default renderer hides Gemini/task panes; advanced capability work remains extension backlog.
 **Phase 1:** accepted by the product owner on 2026-07-24. Code, deterministic verification, final Windows packaging, public live runtime, ownership/reload/shutdown and target-scale UI evidence are complete. Manual operator login and authenticated protected reads remain explicitly unverified.
 **Phase 2:** implementation, deterministic verification, packaging, HUD/Deck runtime smoke, fresh camera lifecycle/performance, actual Windows 125%/150%, and controlled 200% renderer-scale checks are complete. Four physical gesture ergonomics, actual Windows 200%, secondary-monitor and final owner review remain deferred and explicitly unverified because the owner is remote.
-**Phase 8 source preview:** the curated source snapshot is published at [Meunieur/iris-v2](https://github.com/Meunieur/iris-v2) as a fresh public history under Apache-2.0. GitHub-hosted Windows CI passes the locked install, deterministic tests, integration, typecheck, lint, public-surface preflight, build and dependency audits. Community templates, Discussions and private vulnerability reporting are enabled. No signed public binary or Marketplace unit exists; the full dependency graph and production graph report zero known vulnerabilities.
+**Phase 8 source preview:** the curated source snapshot is published at [Meunieur/iris-v2](https://github.com/Meunieur/iris-v2) as a fresh public history under MIT. GitHub-hosted Windows CI passes the locked install, deterministic tests, integration, typecheck, lint, public-surface preflight, build and dependency audits. Community templates, Discussions and private vulnerability reporting are enabled. No signed public binary or Marketplace unit exists; the full dependency graph and production graph report zero known vulnerabilities.
 
 ## MVP Core progress
 
 | Item | State | Evidence / next gate |
 |---|---|---|
 | Scope | Approved by product owner 2026-08-01 | [MVP scope](MVP_SCOPE.md); advanced panes are preserved but default-off |
-| Core test gate | Verified 2026-08-01 | `npm run test:mvp` passed 15 files / 185 tests; full suite passed 56 files / 458 tests |
+| Core test gate | Verified 2026-08-01 | `npm run test:mvp` passed 15 files / 185 tests; full suite passed 56 files / 459 tests |
 | Attached runtime | Verified 2026-08-01 | `npm run probe:jarvis -- --repeat 2` passed; no duplicate JarvisOS process or data root |
 | Package check | Verified 2026-08-01 | Build, Windows package verifier, lint, typecheck and policy audit passed |
 | Product checkpoint | Verified 2026-08-01 | Manual packaged HUD/Deck shows `Sẵn sàng`, `Đã đăng nhập`, Brain Default and live Second Brain; local search is deterministic/UI-covered and no credential was automated |
@@ -20,7 +20,7 @@
 ### Fresh 2026-08-01 MVP Core verification
 
 - `npm run test:mvp`: 15 files / 185 tests passed.
-- `npm test`: 56 files / 458 tests passed; `npm run test:integration`: 4/4
+- `npm test`: 56 files / 459 tests passed; `npm run test:integration`: 4/4
   disposable HTTP tests passed.
 - `npm run typecheck`, `npm run lint`, `npm run build`, `npm run audit:policy`
   and `npm audit --omit=dev --audit-level=high` all passed. The current full
@@ -71,13 +71,13 @@ Build-chain evidence: [supply-chain hardening verification](reports/2026-07-31-b
 | Item | State | Evidence / next gate |
 |---|---|---|
 | Product narrative | Published | The focused README leads with usefulness, authority boundary, verified status, deterministic setup and live CI evidence. |
-| Community surface | Published | Apache-2.0 contribution terms, Contributor Covenant 2.1, issue/feature/PR templates, support policy and GitHub Discussions are available. |
+| Community surface | Published | MIT contribution terms, Contributor Covenant 2.1, issue/feature/PR templates, support policy and GitHub Discussions are available. |
 | CI and dependency updates | Hosted and verified | Windows CI passes locked install, tests, integration, typecheck, lint, build, fail-closed full-graph audit policy and production audit with read-only permissions and full-SHA official actions. Dependabot covers npm and GitHub Actions. |
 | Privacy/security reporting | Published; curated boundary enforced | Privacy data flows and no-public-disclosure guidance are documented. The bounded scan finds no local-account marker or contiguous high-signal secret pattern in the public snapshot. [ADR-008](../decisions/ADR-008-public-release-boundary.md) keeps internal history private. GitHub private vulnerability reporting is enabled; the conduct contact is published separately. |
-| Public-candidate preflight | Ready and CI-enforced | The 2026-08-01 candidate contains 241 files with 0 technical errors and 0 owner blockers. Full and technical-only modes pass. |
+| Public-candidate preflight | Ready and CI-enforced | The 2026-08-01 candidate contains 242 files with 0 technical errors and 0 owner blockers. Full and technical-only modes pass. |
 | Launch media | Locally rendered and verified 2026-08-01 | README hero, 1280 x 640 social preview and an 8-second silent H.264 loop use representative read-only Observatory data, contain no private desktop/Jarvis data and are individually binary-allowlisted. See the [verification report](reports/2026-08-01-launch-media-verification.md). |
 | Launch/rollback | Prepared | [Public release plan](PUBLIC_RELEASE_PLAN.md) defines stages, candidate checklist, media hygiene, hard rollback triggers and owner gates. |
-| Distribution | Source-only preview published | Apache-2.0 source version `0.1.0-alpha.1` is available at [Meunieur/iris-v2](https://github.com/Meunieur/iris-v2). No signed binary or Marketplace unit is published. |
+| Distribution | Source-only preview published | MIT source version `0.1.0-alpha.1` is available at [Meunieur/iris-v2](https://github.com/Meunieur/iris-v2). No signed binary or Marketplace unit is published. |
 
 ## Phase 0 progress
 

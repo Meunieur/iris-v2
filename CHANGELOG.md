@@ -8,9 +8,9 @@ development milestones rather than general-availability releases.
 
 ### Added
 
-- Selected Apache-2.0 for original Iris v2 code, preserved the ASHR12/iris MIT
-  notice, added a source-preview support policy and accepted the ADR-008 clean
-  public-snapshot boundary.
+- Selected MIT for original Iris v2 code, preserved the ASHR12/iris MIT notice
+  and MediaPipe Apache-2.0 terms, added a source-preview support policy and
+  accepted the ADR-008 clean public-snapshot boundary.
 - Assigned `0.1.0-alpha.1` to the source-first developer preview while keeping
   every workspace private from accidental npm publication.
 - Added the MVP Core scope: default HUD + gesture + attached JarvisOS +
@@ -58,7 +58,7 @@ development milestones rather than general-availability releases.
   with the owner-provided private enforcement contact.
 - A fresh Windows package verified 1,381 application files plus the packaged
   Apache license, project NOTICE, third-party notices and ASHR12/iris MIT text.
-- MVP Core verification passed: 15/185 focused tests, 56/458 full tests,
+- MVP Core verification passed: 15/185 focused tests, 56/459 full tests,
   disposable integration 4/4, typecheck, lint, build, package verification and
   policy audit.
 - A packaged HUD/Deck smoke confirmed the `MVP CORE` default surface, local

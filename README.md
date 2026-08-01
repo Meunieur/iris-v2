@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://github.com/Meunieur/iris-v2/actions/workflows/ci.yml"><img alt="Windows CI" src="https://github.com/Meunieur/iris-v2/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-58e1f3.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-58e1f3.svg"></a>
 </p>
 
 > **MVP Core preview.** The default product is intentionally small: Electron
@@ -180,7 +180,8 @@ recorded in [the upstream notes](docs/research/UPSTREAM_NOTES.md) and
 [third-party notices](THIRD_PARTY_NOTICES.md).
 
 Original Iris v2 code is licensed under the
-[Apache License 2.0](LICENSE). Third-party components remain under their own
+[MIT License](LICENSE). Third-party components remain under their own
 licenses; the complete attribution boundary is recorded in
 [NOTICE](NOTICE), [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and
-[the preserved ASHR12/iris MIT license](LICENSES/ASHR12-iris-MIT.txt).
+the preserved [ASHR12/iris MIT license](LICENSES/ASHR12-iris-MIT.txt) and
+[Apache-2.0 license](LICENSES/Apache-2.0.txt).

@@ -471,7 +471,7 @@ transition.
 
 **Repository-launch foundation status (2026-08-01):** the source-first developer
 preview is published from the ADR-008 curated boundary at
-[Meunieur/iris-v2](https://github.com/Meunieur/iris-v2) under Apache-2.0. The
+[Meunieur/iris-v2](https://github.com/Meunieur/iris-v2) under MIT. The
 public repository includes the product README, privacy/contribution/security
 boundaries, community templates, Discussions, pinned least-privilege Windows
 CI, Dependabot, private vulnerability reporting and the staged rollback plan.
