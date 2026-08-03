@@ -28,11 +28,11 @@
     "node": ">=22.18.0"
   },
   "devDependencies": {
-    "@electron-internal/extract-zip": "1.0.4",
+    "@electron-internal/extract-zip": "1.0.5",
     "@electron/asar": "4.2.1",
-    "@electron/get": "5.0.0",
+    "@electron/get": "5.1.0",
     "@types/node": "22.20.1",
-    "oxlint": "1.75.0",
+    "oxlint": "1.76.0",
     "tsx": "4.23.1",
     "typescript": "7.0.2",
     "vitest": "4.1.10"
