@@ -15,28 +15,28 @@
     "package:win": "npm run build:workspace-deps && npm run build && node scripts/prepare-electron-dist.mjs && electron-builder --win --dir && node scripts/verify-package.mjs"
   },
   "dependencies": {
-    "@google/genai": "2.13.0",
+    "@google/genai": "2.23.0",
     "@iris/contracts": "0.1.0-alpha.1",
     "@iris/gemini-bridge": "0.1.0-alpha.1",
     "@iris/gesture-runtime": "0.1.0-alpha.1",
     "@iris/jarvis-adapter": "0.1.0-alpha.1",
     "@mediapipe/tasks-vision": "0.10.35",
-    "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@testing-library/dom": "10.4.1",
-    "@testing-library/react": "16.3.2",
-    "@testing-library/user-event": "14.6.1",
-    "@types/react": "19.2.17",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "6.0.4",
-    "concurrently": "10.0.4",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.7",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "concurrently": "10.0.5",
     "electron": "43.2.0",
     "electron-builder": "26.15.3",
-    "esbuild": "0.28.1",
+    "esbuild": "0.28.2",
     "jsdom": "29.1.1",
-    "vite": "8.1.5",
+    "vite": "8.3.0",
     "wait-on": "9.1.0"
   },
   "build": {
